@@ -10,20 +10,30 @@ import javafx.stage.StageStyle;
 
 
 public class Calculator extends Application {
+
+    private double xOffset = 0;
+    private double yOffset = 0;
+
     @Override
     public void start(Stage primaryStage) {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("calculator.fxml"));
             Scene scene = new Scene(root);
-			
 
-//			Add those line of code to make the apps frame transparent
-//			primaryStage.initStyle(StageStyle.TRANSPARENT);
+			primaryStage.initStyle(StageStyle.TRANSPARENT);
 			scene.setFill(Color.TRANSPARENT);
-
-
-//            scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
             primaryStage.setScene(scene);
+
+            root.setOnMousePressed(event -> {
+                xOffset = event.getSceneX();
+                yOffset = event.getSceneY();
+            });
+
+            root.setOnMouseDragged(event -> {
+                primaryStage.setX(event.getScreenX() - xOffset);
+                primaryStage.setY(event.getScreenY() - yOffset);
+            });
+
             primaryStage.show();
         } catch(Exception e) {
             e.printStackTrace();
