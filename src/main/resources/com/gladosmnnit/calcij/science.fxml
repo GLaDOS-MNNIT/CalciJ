@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="709.0" prefWidth="376.0" styleClass="main-container" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="32.0" prefWidth="376.0">
+         <children>
+            <FontIcon layoutX="14.0" layoutY="31.0" />
+            <StackPane layoutX="325.0" layoutY="3.0" prefHeight="43.0" prefWidth="50.0" styleClass="exit-button">
+               <children>
+                  <FontIcon fill="WHITE" styleClass="exit" text="" wrappingWidth="26.4000244140625" />
+               </children>
+            </StackPane>
+            <FontIcon layoutX="7.0" layoutY="37.0" styleClass="menu" text="" />
+            <MenuButton layoutX="1.0" layoutY="9.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="40.0" styleClass="menu-back" text="MenuButton">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Standard" />
+                  <MenuItem mnemonicParsing="false" text="Scientific" />
+                  <MenuItem mnemonicParsing="false" text="Converter" />
+               </items>
+            </MenuButton>
+         </children>
+         <styleClass>
+            <String fx:value="upper-body" />
+            <String fx:value="navbar" />
+         </styleClass></AnchorPane>
+      <VBox prefHeight="140.0" prefWidth="376.0" styleClass="upper-body">
+         <children>
+            <Label prefHeight="79.0" prefWidth="376.0" styleClass="expression" />
+            <Label prefHeight="84.0" prefWidth="376.0" styleClass="answer" text="0" />
+         </children>
+      </VBox>
+      <AnchorPane prefHeight="49.0" prefWidth="376.0">
+         <children>
+            <FontIcon layoutX="14.0" layoutY="38.0" styleClass="history" wrappingWidth="26.4000244140625" />
+         </children>
+      </AnchorPane>
+      <GridPane prefHeight="475.0" prefWidth="376.0" styleClass="grid">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button mnemonicParsing="false" prefHeight="54.0" prefWidth="74.0" text="2nd">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <styleClass>
+                  <String fx:value="calc-button" />
+                  <String fx:value="upper-three-button" />
+               </styleClass>
+            </Button>
+            <Button layoutX="20.0" layoutY="20.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="74.0" text="(" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" />
+               </GridPane.margin>
+               <styleClass>
+                  <String fx:value="calc-button" />
+                  <String fx:value="lower-twelve-button" />
+               </styleClass>
+            </Button>
+            <Button layoutX="20.0" layoutY="20.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="74.0" text="mc" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <styleClass>
+                  <String fx:value="calc-button" />
+                  <String fx:value="upper-three-button" />
+               </styleClass>
+            </Button>
+            <Button layoutX="20.0" layoutY="20.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="74.0" text="m+" GridPane.columnIndex="2">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <styleClass>
+                  <String fx:value="calc-button" />
+                  <String fx:value="upper-three-button" />
+               </styleClass>
+            </Button>
+            <Button layoutX="20.0" layoutY="20.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="74.0" text=")" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <styleClass>
+                  <String fx:value="calc-button" />
+                  <String fx:value="lower-twelve-button" />
+               </styleClass>
+            </Button>
+            <Button layoutX="20.0" layoutY="20.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="74.0" text="m-" GridPane.columnIndex="3">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <styleClass>
+                  <String fx:value="calc-button" />
+                  <String fx:value="upper-three-button" />
+               </styleClass>
+            </Button>
+            <Button layoutX="20.0" layoutY="20.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="74.0" text="mr" GridPane.columnIndex="4">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <styleClass>
+                  <String fx:value="calc-button" />
+                  <String fx:value="side-four-button" />
+               </styleClass>
+            </Button>
+            <Button layoutX="20.0" layoutY="20.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="74.0" text="sin" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <styleClass>
+                  <String fx:value="calc-button" />
+                  <String fx:value="lower-twelve-button" />
+               </styleClass>
+            </Button>
+            <Button layoutX="20.0" layoutY="20.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="74.0" text="cos" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <styleClass>
+                  <String fx:value="calc-button" />
+                  <String fx:value="lower-twelve-button" />
+               </styleClass>
+            </Button>
+            <Button layoutX="20.0" layoutY="20.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="74.0" text="tan" GridPane.columnIndex="4" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <styleClass>
+                  <String fx:value="calc-button" />
+                  <String fx:value="side-four-button" />
+               </styleClass>
+            </Button>
+            <Button layoutX="20.0" layoutY="20.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="74.0" text="x²" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <styleClass>
+                  <String fx:value="calc-button" />
+                  <String fx:value="lower-twelve-button" />
+               </styleClass>
+            </Button>
+            <Button layoutX="20.0" layoutY="20.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="74.0" text="x !" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <styleClass>
+                  <String fx:value="calc-button" />
+                  <String fx:value="lower-twelve-button" />
+               </styleClass>
+            </Button>
+            <Button layoutX="20.0" layoutY="20.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="74.0" text="π" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <styleClass>
+                  <String fx:value="calc-button" />
+                  <String fx:value="lower-twelve-button" />
+               </styleClass>
+            </Button>
+            <Button layoutX="20.0" layoutY="20.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="74.0" text="Rad" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <styleClass>
+                  <String fx:value="calc-button" />
+                  <String fx:value="lower-twelve-button" />
+               </styleClass>
+            </Button>
+            <Button layoutX="20.0" layoutY="20.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="74.0" text="EE" GridPane.columnIndex="4" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <styleClass>
+                  <String fx:value="calc-button" />
+                  <String fx:value="side-four-button" />
+               </styleClass>
+            </Button>
+            <Button layoutX="20.0" layoutY="20.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="74.0" text="√x" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <styleClass>
+                  <String fx:value="calc-button" />
+                  <String fx:value="lower-twelve-button" />
+               </styleClass>
+            </Button>
+            <Button layoutX="20.0" layoutY="20.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="74.0" text="AC" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <styleClass>
+                  <String fx:value="calc-button" />
+                  <String fx:value="lower-twelve-button" />
+               </styleClass>
+            </Button>
+            <Button layoutX="20.0" layoutY="20.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="59.0" text="1/x" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <styleClass>
+                  <String fx:value="calc-button" />
+                  <String fx:value="lower-twelve-button" />
+               </styleClass>
+            </Button>
+            <Button layoutX="20.0" layoutY="20.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="74.0" text="\%" GridPane.columnIndex="3" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <styleClass>
+                  <String fx:value="calc-button" />
+                  <String fx:value="lower-twelve-button" />
+               </styleClass>
+            </Button>
+            <Button layoutX="20.0" layoutY="20.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="74.0" text="/" GridPane.columnIndex="4" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <styleClass>
+                  <String fx:value="calc-button" />
+                  <String fx:value="side-four-button" />
+               </styleClass>
+            </Button>
+            <Button layoutX="20.0" layoutY="20.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="74.0" text=" x^y" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <styleClass>
+                  <String fx:value="calc-button" />
+                  <String fx:value="lower-twelve-button" />
+               </styleClass>
+            </Button>
+            <Button layoutX="15.0" layoutY="15.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="74.0" text="7" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <styleClass>
+                  <String fx:value="calc-button" />
+                  <String fx:value="lower-twelve-button" />
+               </styleClass>
+            </Button>
+            <Button layoutX="15.0" layoutY="15.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="74.0" text="8" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <styleClass>
+                  <String fx:value="calc-button" />
+                  <String fx:value="lower-twelve-button" />
+               </styleClass>
+            </Button>
+            <Button layoutX="15.0" layoutY="15.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="74.0" text="9" GridPane.columnIndex="3" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <styleClass>
+                  <String fx:value="calc-button" />
+                  <String fx:value="lower-twelve-button" />
+               </styleClass>
+            </Button>
+            <Button layoutX="15.0" layoutY="15.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="74.0" text="X" GridPane.columnIndex="4" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <styleClass>
+                  <String fx:value="calc-button" />
+                  <String fx:value="side-four-button" />
+               </styleClass>
+            </Button>
+            <Button layoutX="15.0" layoutY="15.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="74.0" text="10^x" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <styleClass>
+                  <String fx:value="calc-button" />
+                  <String fx:value="lower-twelve-button" />
+               </styleClass>
+            </Button>
+            <Button layoutX="15.0" layoutY="15.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="74.0" text="4" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <styleClass>
+                  <String fx:value="lower-twelve-button" />
+                  <String fx:value="calc-button" />
+               </styleClass>
+            </Button>
+            <Button layoutX="15.0" layoutY="15.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="74.0" text="5" GridPane.columnIndex="2" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <styleClass>
+                  <String fx:value="calc-button" />
+                  <String fx:value="lower-twelve-button" />
+               </styleClass>
+            </Button>
+            <Button layoutX="15.0" layoutY="15.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="74.0" text="6" GridPane.columnIndex="3" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <styleClass>
+                  <String fx:value="calc-button" />
+                  <String fx:value="lower-twelve-button" />
+               </styleClass>
+            </Button>
+            <Button layoutX="15.0" layoutY="15.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="74.0" text="-" GridPane.columnIndex="4" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <styleClass>
+                  <String fx:value="calc-button" />
+                  <String fx:value="side-four-button" />
+               </styleClass>
+            </Button>
+            <Button layoutX="15.0" layoutY="15.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="74.0" text="e" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <styleClass>
+                  <String fx:value="calc-button" />
+                  <String fx:value="lower-twelve-button" />
+               </styleClass>
+            </Button>
+            <Button layoutX="15.0" layoutY="15.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="74.0" text="1" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <styleClass>
+                  <String fx:value="calc-button" />
+                  <String fx:value="lower-twelve-button" />
+               </styleClass>
+            </Button>
+            <Button layoutX="15.0" layoutY="15.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="74.0" text="2" GridPane.columnIndex="2" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <styleClass>
+                  <String fx:value="calc-button" />
+                  <String fx:value="lower-twelve-button" />
+               </styleClass>
+            </Button>
+            <Button layoutX="15.0" layoutY="15.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="74.0" text="3" GridPane.columnIndex="3" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <styleClass>
+                  <String fx:value="calc-button" />
+                  <String fx:value="lower-twelve-button" />
+               </styleClass>
+            </Button>
+            <Button layoutX="15.0" layoutY="15.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="74.0" text="+" GridPane.columnIndex="4" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <styleClass>
+                  <String fx:value="calc-button" />
+                  <String fx:value="side-four-button" />
+               </styleClass>
+            </Button>
+            <Button layoutX="15.0" layoutY="15.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="74.0" text="ln" GridPane.rowIndex="7">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <styleClass>
+                  <String fx:value="calc-button" />
+                  <String fx:value="lower-twelve-button" />
+               </styleClass>
+            </Button>
+            <Button layoutX="15.0" layoutY="15.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="74.0" text="." GridPane.columnIndex="1" GridPane.rowIndex="7">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <styleClass>
+                  <String fx:value="calc-button" />
+                  <String fx:value="lower-twelve-button" />
+               </styleClass>
+            </Button>
+            <Button layoutX="15.0" layoutY="15.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="74.0" text="0" GridPane.columnIndex="2" GridPane.rowIndex="7">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <styleClass>
+                  <String fx:value="calc-button" />
+                  <String fx:value="lower-twelve-button" />
+               </styleClass>
+            </Button>
+            <Button layoutX="15.0" layoutY="15.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="74.0" GridPane.columnIndex="3" GridPane.rowIndex="7">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <styleClass>
+                  <String fx:value="calc-button" />
+                  <String fx:value="lower-twelve-button" />
+               </styleClass>
+            </Button>
+            <Button layoutX="15.0" layoutY="15.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="74.0" text="=" GridPane.columnIndex="4" GridPane.rowIndex="7">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <styleClass>
+                  <String fx:value="calc-button" />
+                  <String fx:value="equal-button" />
+               </styleClass>
+            </Button>
+            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="7">
+               <children>
+                  <FontIcon styleClass="clear" />
+               </children>
+            </StackPane>
+         </children>
+      </GridPane>
+   </children>
+</VBox>
