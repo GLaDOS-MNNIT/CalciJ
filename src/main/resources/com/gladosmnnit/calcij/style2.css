@@ -1,0 +1,93 @@
+.main-container{
+    -fx-background-color: #252628;
+    -fx-border-radius: 5px;
+}
+
+.upper-body{
+    -fx-background-color: #1b1c1e;
+}
+
+.answer{
+    -fx-border-color: #ebebeb;
+    -fx-border-width: 0 0 5px 0;
+}
+
+.upper-three-button{
+    -fx-background-color:#888273;
+    -fx-background-radius: 5px;
+}
+
+.lower-twelve-button{
+    -fx-background-color: #533d28;
+}
+
+.side-four-button{
+    -fx-background-color: #e29a43;
+}
+
+.equal-button{
+    -fx-background-color: #ffc261
+}
+
+.grid{
+    -fx-vgap: 2px;
+    -fx-hgap: 3px;
+    -fx-padding: 0 15px 20px 15px ;
+}
+
+.calc-button{
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Arial";
+}
+
+.history{
+    -fx-icon-size:28px;
+    -fx-icon-code: 'cil-history';
+    -fx-icon-color: #efa939;
+}
+
+.menu{
+    -fx-icon-code: "cil-hamburger-menu";
+    -fx-icon-color: white;
+    -fx-icon-size: 28px;
+}
+
+.exit{
+    -fx-icon-code: "cil-x";
+    -fx-icon-color: white;
+    -fx-icon-size: 28px;
+}
+
+.exit-button:hover{
+    -fx-background-color: red;
+}
+
+.clear{
+    -fx-icon-code: "cil-backspace";
+    -fx-icon-color: white;
+    -fx-icon-size: 30px;
+}
+
+.expression{
+    -fx-font-size: 28px;
+    -fx-text-fill: #9d948a;
+    -fx-padding: 0 15px 0 0;
+    -fx-alignment: center-right;
+}
+
+.answer{
+    -fx-font-size: 48px;
+    -fx-alignment: center_right;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-family: "Arial";
+    -fx-padding: 0 15px 0 0;
+}
+
+.menu-back{
+    -fx-opacity: 0;
+}
