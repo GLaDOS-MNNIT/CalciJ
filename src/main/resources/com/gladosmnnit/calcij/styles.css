@@ -76,6 +76,7 @@
     -fx-font-size: 28px;
     -fx-text-fill: #9d948a;
     -fx-padding: 0 15px 0 0;
+    -fx-alignment: center-right;
 }
 
 .answer{

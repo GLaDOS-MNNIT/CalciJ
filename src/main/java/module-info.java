@@ -7,6 +7,4 @@ module com.gladosmnnit.calcij {
     exports com.gladosmnnit.calcij;
     opens com.gladosmnnit.calcij.utils to javafx.fxml;
     exports com.gladosmnnit.calcij.utils;
-    opens com.gladosmnnit.calcij.controller to javafx.fxml;
-    exports com.gladosmnnit.calcij.controller;
 }

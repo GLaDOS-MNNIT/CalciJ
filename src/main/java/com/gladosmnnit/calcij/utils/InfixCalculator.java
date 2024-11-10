@@ -1,17 +1,18 @@
+package com.gladosmnnit.calcij.utils;
 import java.util.*;
 
 public class InfixCalculator {
 
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String infixExpression = scanner.nextLine();
-        try {
-            double result = evaluateInfix(infixExpression);
-            System.out.println("Result: " + result);
-        } catch (Exception e) {
-            System.out.println("Invalid expression: " + e.getMessage());
-        }
-    }
+//    public static void main(String[] args) {
+//        Scanner scanner = new Scanner(System.in);
+//        String infixExpression = scanner.nextLine();
+//        try {
+//            double result = evaluateInfix(infixExpression);
+//            System.out.println("Result: " + result);
+//        } catch (Exception e) {
+//            System.out.println("Invalid expression: " + e.getMessage());
+//        }
+//    }
 
     // Method to evaluate an infix expression
     public static double evaluateInfix(String expression) throws Exception {
@@ -23,7 +24,7 @@ public class InfixCalculator {
     public static String infixToPostfix(String expression) throws Exception {
         StringBuilder output = new StringBuilder();
         Stack<String> operators = new Stack<>();
-        StringTokenizer tokenizer = new StringTokenizer(expression, "()+-*/% ", true);
+        StringTokenizer tokenizer = new StringTokenizer(expression, "()+-x/% ", true);
         boolean expectNegativeNumber = true;
 
         while (tokenizer.hasMoreTokens()) {
@@ -84,7 +85,7 @@ public class InfixCalculator {
                 switch (token.charAt(0)) {
                     case '+': stack.push(a + b); break;
                     case '-': stack.push(a - b); break;
-                    case '*': stack.push(a * b); break;
+                    case 'x': stack.push(a * b); break;
                     case '/':
                         if (b == 0) throw new Exception("Division by zero");
                         stack.push(a / b);
@@ -104,13 +105,13 @@ public class InfixCalculator {
 
     // Method to check if a character is an operator
     public static boolean isOperator(char ch) {
-        return ch == '+' || ch == '-' || ch == '*' || ch == '/' || ch == '%';
+        return ch == '+' || ch == '-' || ch == 'x' || ch == '/' || ch == '%';
     }
 
     //  Method to determine the precedence of operators
     public static int precedence(String op) {
         if (op.equals("+") || op.equals("-")) return 1;
-        if (op.equals("*") || op.equals("/") || op.equals("%")) return 2;
+        if (op.equals("x") || op.equals("/") || op.equals("%")) return 2;
         return -1;
     }
 
