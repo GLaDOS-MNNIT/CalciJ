@@ -14,7 +14,7 @@
 <?import javafx.scene.text.Font?>
 <?import org.kordamp.ikonli.javafx.FontIcon?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="709.0" prefWidth="376.0" styleClass="main-container" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="709.0" prefWidth="376.0" styleClass="main-container" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gladosmnnit.calcij.CalculatorController">
    <children>
       <AnchorPane prefHeight="52.0" prefWidth="376.0">
          <styleClass>
@@ -26,24 +26,24 @@
             <MenuButton layoutX="4.0" layoutY="12.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="36.0" styleClass="menu-back" text="MenuButton">
               <items>
                 <MenuItem mnemonicParsing="false" text="Standard" />
-                <MenuItem mnemonicParsing="false" text="Scientific" />
+                <MenuItem mnemonicParsing="false" onAction="#changeToScientific" text="Scientific" />
                  <MenuItem mnemonicParsing="false" text="Converter" />
               </items>
             </MenuButton>
             <StackPane layoutX="325.0" layoutY="1.0" prefHeight="46.0" prefWidth="50.0" styleClass="exit-button">
                <children>
-                  <FontIcon fill="WHITE" styleClass="exit" text="" wrappingWidth="26.4000244140625" />
+                  <FontIcon fill="WHITE" onMouseClicked="#quit" styleClass="exit" text="" wrappingWidth="26.4000244140625" />
                </children>
             </StackPane>
          </children></AnchorPane>
       <VBox prefHeight="158.0" prefWidth="376.0">
          <children>
-            <Label prefHeight="61.0" prefWidth="376.0">
+            <Label id="expressionLabel" fx:id="expressionLabel" prefHeight="61.0" prefWidth="376.0">
                <styleClass>
                   <String fx:value="upper-body" />
                   <String fx:value="expression" />
                </styleClass></Label>
-            <Label prefHeight="91.0" prefWidth="376.0" text="0">
+            <Label fx:id="answerLabel" prefHeight="91.0" prefWidth="376.0" text="0">
                <styleClass>
                   <String fx:value="upper-body" />
                   <String fx:value="answer" />
@@ -71,7 +71,7 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="119.0" prefWidth="94.0" text="\%" GridPane.columnIndex="2">
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#handleButtonClick" prefHeight="119.0" prefWidth="94.0" text="\%" GridPane.columnIndex="2">
                <styleClass>
                   <String fx:value="upper-three-button" />
                   <String fx:value="calc-button" />
@@ -86,91 +86,91 @@
                   <Font name="Cambria" size="12.0" />
                </font>
             </Button>
-            <Button layoutX="198.0" layoutY="10.0" mnemonicParsing="false" prefHeight="119.0" prefWidth="94.0" text="9" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <Button layoutX="198.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#handleButtonClick" prefHeight="119.0" prefWidth="94.0" text="9" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <styleClass>
                   <String fx:value="lower-twelve-button" />
                   <String fx:value="calc-button" />
                </styleClass>
             </Button>
-            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="119.0" prefWidth="94.0" text="4" GridPane.rowIndex="2">
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#handleButtonClick" prefHeight="119.0" prefWidth="94.0" text="4" GridPane.rowIndex="2">
                <styleClass>
                   <String fx:value="lower-twelve-button" />
                   <String fx:value="calc-button" />
                </styleClass>
             </Button>
-            <Button layoutX="10.0" layoutY="100.0" mnemonicParsing="false" prefHeight="119.0" prefWidth="94.0" text="8" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <Button layoutX="10.0" layoutY="100.0" mnemonicParsing="false" onMouseClicked="#handleButtonClick" prefHeight="119.0" prefWidth="94.0" text="8" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <styleClass>
                   <String fx:value="lower-twelve-button" />
                   <String fx:value="calc-button" />
                </styleClass>
             </Button>
-            <Button layoutX="10.0" layoutY="191.0" mnemonicParsing="false" prefHeight="119.0" prefWidth="94.0" text="7" GridPane.rowIndex="1">
+            <Button layoutX="10.0" layoutY="191.0" mnemonicParsing="false" onMouseClicked="#handleButtonClick" prefHeight="119.0" prefWidth="94.0" text="7" GridPane.rowIndex="1">
                <styleClass>
                   <String fx:value="lower-twelve-button" />
                   <String fx:value="calc-button" />
                </styleClass>
             </Button>
-            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="119.0" prefWidth="94.0" text="/" GridPane.columnIndex="3">
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#handleButtonClick" prefHeight="119.0" prefWidth="94.0" text="/" GridPane.columnIndex="3">
                <styleClass>
                   <String fx:value="side-four-button" />
                   <String fx:value="calc-button" />
                </styleClass>
             </Button>
-            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="119.0" prefWidth="94.0" text="X" GridPane.columnIndex="3" GridPane.rowIndex="1">
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#handleButtonClick" prefHeight="119.0" prefWidth="94.0" text="x" GridPane.columnIndex="3" GridPane.rowIndex="1">
                <styleClass>
                   <String fx:value="side-four-button" />
                   <String fx:value="calc-button" />
                </styleClass>
             </Button>
-            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="119.0" prefWidth="94.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#handleButtonClick" prefHeight="119.0" prefWidth="94.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <styleClass>
                   <String fx:value="lower-twelve-button" />
                   <String fx:value="calc-button" />
                </styleClass>
             </Button>
-            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="119.0" prefWidth="94.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="2">
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#handleButtonClick" prefHeight="119.0" prefWidth="94.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <styleClass>
                   <String fx:value="lower-twelve-button" />
                   <String fx:value="calc-button" />
                </styleClass>
             </Button>
-            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="119.0" prefWidth="94.0" text="-" GridPane.columnIndex="3" GridPane.rowIndex="2">
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#handleButtonClick" prefHeight="119.0" prefWidth="94.0" text="-" GridPane.columnIndex="3" GridPane.rowIndex="2">
                <styleClass>
                   <String fx:value="side-four-button" />
                   <String fx:value="calc-button" />
                </styleClass>
             </Button>
-            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="119.0" prefWidth="94.0" text="1" GridPane.rowIndex="3">
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#handleButtonClick" prefHeight="119.0" prefWidth="94.0" text="1" GridPane.rowIndex="3">
                <styleClass>
                   <String fx:value="lower-twelve-button" />
                   <String fx:value="calc-button" />
                </styleClass>
             </Button>
-            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="119.0" prefWidth="94.0" text="2" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#handleButtonClick" prefHeight="119.0" prefWidth="94.0" text="2" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <styleClass>
                   <String fx:value="lower-twelve-button" />
                   <String fx:value="calc-button" />
                </styleClass>
             </Button>
-            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="119.0" prefWidth="94.0" text="3" GridPane.columnIndex="2" GridPane.rowIndex="3">
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#handleButtonClick" prefHeight="119.0" prefWidth="94.0" text="3" GridPane.columnIndex="2" GridPane.rowIndex="3">
                <styleClass>
                   <String fx:value="lower-twelve-button" />
                   <String fx:value="calc-button" />
                </styleClass>
             </Button>
-            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="119.0" prefWidth="94.0" text="+" GridPane.columnIndex="3" GridPane.rowIndex="3">
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#handleButtonClick" prefHeight="119.0" prefWidth="94.0" text="+" GridPane.columnIndex="3" GridPane.rowIndex="3">
                <styleClass>
                   <String fx:value="side-four-button" />
                   <String fx:value="calc-button" />
                </styleClass>
             </Button>
-            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="119.0" prefWidth="94.0" text="." GridPane.rowIndex="4">
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#handleButtonClick" prefHeight="119.0" prefWidth="94.0" text="." GridPane.rowIndex="4">
                <styleClass>
                   <String fx:value="lower-twelve-button" />
                   <String fx:value="calc-button" />
                </styleClass>
             </Button>
-            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="119.0" prefWidth="94.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#handleButtonClick" prefHeight="119.0" prefWidth="94.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <styleClass>
                   <String fx:value="lower-twelve-button" />
                   <String fx:value="calc-button" />
@@ -182,19 +182,19 @@
                   <String fx:value="calc-button" />
                </styleClass>
             </Button>
-            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="119.0" prefWidth="94.0" text="=" GridPane.columnIndex="3" GridPane.rowIndex="4">
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#handleEquals" prefHeight="119.0" prefWidth="94.0" text="=" GridPane.columnIndex="3" GridPane.rowIndex="4">
                <styleClass>
                   <String fx:value="equal-button" />
                   <String fx:value="calc-button" />
                </styleClass>
             </Button>
-            <Button layoutX="115.0" layoutY="10.0" mnemonicParsing="false" prefHeight="119.0" prefWidth="94.0" text="C">
+            <Button layoutX="115.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#handleClear" prefHeight="119.0" prefWidth="94.0" text="C">
                <styleClass>
                   <String fx:value="upper-three-button" />
                   <String fx:value="calc-button" />
                </styleClass>
             </Button>
-            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+            <StackPane onMouseClicked="#handleClear" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
                <children>
                   <FontIcon styleClass="clear" />
                </children>

@@ -5,7 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="39cb2edf-d965-44fc-969d-6b21f10e648a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gladosmnnit/calcij/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gladosmnnit/calcij/Calculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gladosmnnit/calcij/controller/CalculatorController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gladosmnnit/calcij/utils/InfixCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gladosmnnit/calcij/utils/InfixCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gladosmnnit/calcij/calculator.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/gladosmnnit/calcij/calculator.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gladosmnnit/calcij/newui.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/gladosmnnit/calcij/newui.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gladosmnnit/calcij/science.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/gladosmnnit/calcij/science.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gladosmnnit/calcij/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/gladosmnnit/calcij/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +56,7 @@
     "Application.Calculator.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "akash",
+    "git-widget-placeholder": "develop",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/Code/GLaDOS/CalciJ/src/main/resources/com/gladosmnnit/calcij",
     "project.structure.last.edited": "Modules",
@@ -63,6 +72,22 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Code\GLaDOS\CalciJ\src\main\resources\com\gladosmnnit\calcij" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.gladosmnnit.calcij" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

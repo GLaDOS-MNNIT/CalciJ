@@ -17,7 +17,7 @@ public class Calculator extends Application {
     @Override
     public void start(Stage primaryStage) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("calculator.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("newui.fxml"));
             Scene scene = new Scene(root);
 
 			primaryStage.initStyle(StageStyle.TRANSPARENT);
