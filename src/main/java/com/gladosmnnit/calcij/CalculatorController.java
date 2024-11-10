@@ -48,12 +48,13 @@ public class CalculatorController {
         if (expression.endsWith("+") || expression.endsWith("-") || expression.endsWith("x") || expression.endsWith("/") || expression.endsWith("%")) {
             expression = expression.substring(0, expression.length() - 1);
         }
-
+        expressionLabel.setText("0");
         // Evaluate the expression and display the result
         Double result=0.0;
         try{
             result = InfixCalculator.evaluateInfix(expression);
             answerLabel.setText(""+result);
+            expression=""+result;
         }
         catch (Exception e){
             answerLabel.setText("error");

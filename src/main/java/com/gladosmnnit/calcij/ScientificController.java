@@ -2,15 +2,9 @@ package com.gladosmnnit.calcij;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import com.gladosmnnit.calcij.utils.InfixCalculator;
-import javafx.scene.input.MouseEvent;
-import javafx.stage.Stage;
+import com.gladosmnnit.calcij.utils.ScientificCalculate;
 
 import java.io.IOException;
 
@@ -22,6 +16,9 @@ public class ScientificController {
     private Label answerLabel;    // To display the result
 
     private boolean isFunctionMode = false;
+
+    private double xOffset = 0;
+    private double yOffset = 0;
 
     @FXML
     public void initialize() {
@@ -96,11 +93,12 @@ public class ScientificController {
         // For now, let's just set a placeholder result
         try {
             // Example of evaluating the expression, replace with actual logic
-            double result = calculateExpression(expression);
+            double result = ScientificCalculate.evaluateInfix(expression);
             answerLabel.setText(String.valueOf(result));
         } catch (Exception e) {
             answerLabel.setText("Error");
         }
+
     }
 
 }
